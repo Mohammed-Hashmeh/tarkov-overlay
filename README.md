@@ -54,32 +54,37 @@ cd tarkov-overlay
 npm install
 npm run fetch-data   # map data + images from tarkov.dev (~50 MB, takes a couple of minutes)
 npm run build
+npm run shortcut     # puts a "Tarkov Overlay" shortcut on your Desktop
 ```
 
-Then launch it by double-clicking **`Tarkov Overlay.cmd`** in the project folder. Right-click it →
-*Send to* → *Desktop (create shortcut)* to keep it handy.
+That last command creates a **Tarkov Overlay** shortcut on your Desktop — double-click it to play.
+To keep it on the taskbar, right-click the shortcut → **Show more options** → **Pin to taskbar**
+(Windows 11 hides pinning behind that legacy menu).
 
-That `.cmd` starts the app through Electron's own `electron.exe` rather than a built executable.
-This is deliberate: Windows Smart App Control blocks freshly built unsigned binaries, but permits
-`electron.exe`, so this launcher works even with SAC enforcing. It checks its prerequisites and
-tells you which command to run if anything is missing.
+The shortcut launches the app through Electron's own `electron.exe` rather than a compiled binary.
+That is deliberate on two counts: Windows Smart App Control blocks freshly built unsigned
+executables but permits `electron.exe`, and the taskbar refuses to pin `.cmd`/`.bat` scripts at all,
+so a shortcut to a real executable is the only pinnable option. `npm run shortcut` checks that
+dependencies, the build, and map data are all present, and tells you which command to run if any is
+missing.
 
 ### Keeping it current
 
 - After a wipe or game patch, re-run `npm run fetch-data` to refresh maps and quests.
-- After a `git pull`, re-run `npm install` and `npm run build`.
+- After a `git pull`, re-run `npm install` and `npm run build`. The shortcut keeps working; you only
+  need `npm run shortcut` again if you move the project folder.
 
 ### Running from source
 
 `npm run dev` starts the app with hot reload for editing the code. It serves the interface from a
-local dev server, so the `.cmd` launcher won't work standalone until you run `npm run build` again.
+local dev server, so the Desktop shortcut won't work standalone until you run `npm run build` again.
 
 ### Building a distributable copy
 
 `npm run package` writes an unpacked application folder and a `.zip` of it into `dist/`, for moving
 the app to another machine. There is no installer and no single-file portable exe — the packaged
 executable is unsigned and Smart App Control will likely refuse to run it, which is exactly why the
-`.cmd` launcher above is the recommended route.
+shortcut above is the recommended route.
 
 ## Using it in game
 

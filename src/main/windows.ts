@@ -1,4 +1,5 @@
 import { app, BrowserWindow, screen, shell } from 'electron'
+import { existsSync } from 'node:fs'
 import path from 'node:path'
 import type { WindowMode } from '../shared/types'
 
@@ -54,9 +55,15 @@ export function createWindow(
   const old = win
   win = null
 
+  // Shipped via build.files, so this resolves in dev and inside the asar
+  // alike. Without it the window wears Electron's default icon and mismatches
+  // the taskbar shortcut.
+  const iconPath = path.join(app.getAppPath(), 'build', 'icon.ico')
+
   const common = {
     show: false,
     autoHideMenuBar: true,
+    ...(existsSync(iconPath) ? { icon: iconPath } : {}),
     webPreferences: {
       preload: path.join(__dirname, '../preload/index.js'),
       // sandbox off so the preload can use Node; the renderer itself gets no

@@ -95,6 +95,9 @@ function startWatchers(): void {
 }
 
 app.whenReady().then(() => {
+  // Ties the running window to the pinned taskbar shortcut; without a matching
+  // AppUserModelID Windows treats them as two separate taskbar entries.
+  app.setAppUserModelId('com.tarkov-overlay.app')
   enforceOfflineOperation()
   protocol.handle('appdata', (request) => {
     const url = new URL(request.url)
