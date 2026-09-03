@@ -42,15 +42,44 @@ the same anti-cheat-safe techniques used by TarkovMonitor.
   nearest objective with its distance, preferring objectives on your current floor — objectives on
   another floor are labeled with the floor you need (popups show it too).
 
-## Setup
+## Install
+
+**Requirements:** Windows, and [Node.js](https://nodejs.org) 20.19+ or 22.12+ (`node -v` to check).
+Escape from Tarkov itself is only needed to *use* the overlay, not to build it. Expect roughly
+500 MB on disk once dependencies and map imagery are downloaded.
 
 ```
+git clone https://github.com/Mohammed-Hashmeh/tarkov-overlay.git
+cd tarkov-overlay
 npm install
-npm run fetch-data   # downloads map data + images from tarkov.dev (re-run after each wipe/patch)
-npm run dev          # run the app
+npm run fetch-data   # map data + images from tarkov.dev (~50 MB, takes a couple of minutes)
+npm run build
 ```
 
-To build a portable .exe: `npm run package` (output in `dist/`).
+Then launch it by double-clicking **`Tarkov Overlay.cmd`** in the project folder. Right-click it →
+*Send to* → *Desktop (create shortcut)* to keep it handy.
+
+That `.cmd` starts the app through Electron's own `electron.exe` rather than a built executable.
+This is deliberate: Windows Smart App Control blocks freshly built unsigned binaries, but permits
+`electron.exe`, so this launcher works even with SAC enforcing. It checks its prerequisites and
+tells you which command to run if anything is missing.
+
+### Keeping it current
+
+- After a wipe or game patch, re-run `npm run fetch-data` to refresh maps and quests.
+- After a `git pull`, re-run `npm install` and `npm run build`.
+
+### Running from source
+
+`npm run dev` starts the app with hot reload for editing the code. It serves the interface from a
+local dev server, so the `.cmd` launcher won't work standalone until you run `npm run build` again.
+
+### Building a distributable copy
+
+`npm run package` writes an unpacked application folder and a `.zip` of it into `dist/`, for moving
+the app to another machine. There is no installer and no single-file portable exe — the packaged
+executable is unsigned and Smart App Control will likely refuse to run it, which is exactly why the
+`.cmd` launcher above is the recommended route.
 
 ## Using it in game
 
