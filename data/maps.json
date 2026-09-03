@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-29T07:00:16.907Z",
+ "generatedAt": "2026-09-03T03:30:06.587Z",
  "maps": [
   {
    "id": "5714dc692459777137212e12",
@@ -121310,8 +121310,8 @@
      ]
     },
     {
-     "name": "Reshala",
-     "normalizedName": "reshala",
+     "name": "Tagilla",
+     "normalizedName": "tagilla",
      "spawnChance": 0.2,
      "locations": [
       {
@@ -121343,8 +121343,8 @@
      ]
     },
     {
-     "name": "Sanitar",
-     "normalizedName": "sanitar",
+     "name": "Reshala",
+     "normalizedName": "reshala",
      "spawnChance": 0.2,
      "locations": [
       {
@@ -121354,8 +121354,8 @@
      ]
     },
     {
-     "name": "Tagilla",
-     "normalizedName": "tagilla",
+     "name": "Sanitar",
+     "normalizedName": "sanitar",
      "spawnChance": 0.2,
      "locations": [
       {

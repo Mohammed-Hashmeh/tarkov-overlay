@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-29T07:00:16.907Z",
+ "generatedAt": "2026-09-03T03:30:06.587Z",
  "quests": [
   {
    "id": "657315ddab5a49b71f098853",
@@ -2490,12 +2490,12 @@
      "description": "Locate a good tripwire installation spot in the breach room on Factory",
      "optional": false,
      "maps": [
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 25.35,
         "y": 8.76,
@@ -2527,7 +2527,7 @@
        "bottom": 8.428145
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 25.35,
         "y": 8.76,
@@ -3225,17 +3225,17 @@
      "description": "Eliminate Scavs while suffering from the Pain status effect",
      "optional": false,
      "maps": [
-      "icebreaker",
-      "lighthouse",
+      "ground-zero-tutorial",
       "interchange",
       "customs",
-      "shoreline",
-      "night-factory",
-      "woods",
-      "streets-of-tarkov",
       "factory",
+      "shoreline",
       "reserve",
-      "ground-zero-tutorial"
+      "night-factory",
+      "icebreaker",
+      "lighthouse",
+      "streets-of-tarkov",
+      "woods"
      ],
      "markers": []
     }
@@ -4186,17 +4186,17 @@
      "description": "Eliminate Scavs while using a Steyr AUG on any location",
      "optional": false,
      "maps": [
-      "icebreaker",
-      "lighthouse",
+      "ground-zero-tutorial",
       "interchange",
       "customs",
-      "shoreline",
-      "night-factory",
-      "woods",
-      "streets-of-tarkov",
       "factory",
+      "shoreline",
       "reserve",
-      "ground-zero-tutorial"
+      "night-factory",
+      "icebreaker",
+      "lighthouse",
+      "streets-of-tarkov",
+      "woods"
      ],
      "markers": []
     }
@@ -5702,38 +5702,6 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
-       "position": {
-        "x": -16.994,
-        "y": -1.596,
-        "z": 34.808
-       },
-       "outline": [
-        {
-         "x": -20.3389988,
-         "y": -1.596,
-         "z": 34.058
-        },
-        {
-         "x": -13.6489992,
-         "y": -1.596,
-         "z": 34.058
-        },
-        {
-         "x": -13.6489992,
-         "y": -1.596,
-         "z": 35.558
-        },
-        {
-         "x": -20.3389988,
-         "y": -1.596,
-         "z": 35.558
-        }
-       ],
-       "top": -0.595999956,
-       "bottom": -2.596
-      },
-      {
        "map": "factory",
        "position": {
         "x": -16.994,
@@ -5768,34 +5736,34 @@
       {
        "map": "night-factory",
        "position": {
-        "x": 34.428,
-        "y": -1.476,
-        "z": -4.445
+        "x": -16.994,
+        "y": -1.596,
+        "z": 34.808
        },
        "outline": [
         {
-         "x": 33.678,
-         "y": -1.476,
-         "z": -7.79000044
+         "x": -20.3389988,
+         "y": -1.596,
+         "z": 34.058
         },
         {
-         "x": 35.178,
-         "y": -1.476,
-         "z": -7.79
+         "x": -13.6489992,
+         "y": -1.596,
+         "z": 34.058
         },
         {
-         "x": 35.178,
-         "y": -1.476,
-         "z": -1.0999999
+         "x": -13.6489992,
+         "y": -1.596,
+         "z": 35.558
         },
         {
-         "x": 33.678,
-         "y": -1.476,
-         "z": -1.10000014
+         "x": -20.3389988,
+         "y": -1.596,
+         "z": 35.558
         }
        ],
-       "top": -0.475999951,
-       "bottom": -2.47599983
+       "top": -0.595999956,
+       "bottom": -2.596
       },
       {
        "map": "factory",
@@ -5831,6 +5799,38 @@
       },
       {
        "map": "night-factory",
+       "position": {
+        "x": 34.428,
+        "y": -1.476,
+        "z": -4.445
+       },
+       "outline": [
+        {
+         "x": 33.678,
+         "y": -1.476,
+         "z": -7.79000044
+        },
+        {
+         "x": 35.178,
+         "y": -1.476,
+         "z": -7.79
+        },
+        {
+         "x": 35.178,
+         "y": -1.476,
+         "z": -1.0999999
+        },
+        {
+         "x": 33.678,
+         "y": -1.476,
+         "z": -1.10000014
+        }
+       ],
+       "top": -0.475999951,
+       "bottom": -2.47599983
+      },
+      {
+       "map": "factory",
        "position": {
         "x": 45.615,
         "y": -1.596,
@@ -5862,7 +5862,7 @@
        "bottom": -2.596
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 45.615,
         "y": -1.596,
@@ -7294,7 +7294,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 62.68,
         "y": 1.043,
@@ -7326,7 +7326,7 @@
        "bottom": 0.0429999828
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 62.68,
         "y": 1.043,
@@ -7370,7 +7370,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 71.02,
         "y": 1.163,
@@ -7402,7 +7402,7 @@
        "bottom": 0.162999988
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 71.02,
         "y": 1.163,
@@ -7446,7 +7446,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 64.97,
         "y": 1.163,
@@ -7478,7 +7478,7 @@
        "bottom": 0.162999988
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 64.97,
         "y": 1.163,
@@ -7522,7 +7522,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": -31.57,
         "y": 2.33,
@@ -7554,7 +7554,7 @@
        "bottom": 1.32999992
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": -31.57,
         "y": 2.33,
@@ -7598,7 +7598,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 22.58,
         "y": 1.163,
@@ -7630,7 +7630,7 @@
        "bottom": 0.162999988
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 22.58,
         "y": 1.163,
@@ -7674,7 +7674,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 21.868,
         "y": 1.163,
@@ -7706,7 +7706,7 @@
        "bottom": 0.162999988
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 21.868,
         "y": 1.163,
@@ -7750,7 +7750,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 12.37,
         "y": 1.163,
@@ -7782,7 +7782,7 @@
        "bottom": 0.162999988
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 12.37,
         "y": 1.163,
@@ -7826,7 +7826,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": -15.77,
         "y": 2.259,
@@ -7858,7 +7858,7 @@
        "bottom": 0.759000063
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": -15.77,
         "y": 2.259,
@@ -7902,7 +7902,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 13.63,
         "y": 1.163,
@@ -7934,7 +7934,7 @@
        "bottom": -0.337
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 13.63,
         "y": 1.163,
@@ -7978,7 +7978,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 53.37,
         "y": 1.48,
@@ -8010,7 +8010,7 @@
        "bottom": -0.01999998
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 53.37,
         "y": 1.48,
@@ -8054,7 +8054,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 18.3,
         "y": 1.49,
@@ -8086,7 +8086,7 @@
        "bottom": -0.00999999
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 18.3,
         "y": 1.49,
@@ -8130,7 +8130,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 58.323,
         "y": 1.73,
@@ -8162,7 +8162,7 @@
        "bottom": 0.230000019
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 58.323,
         "y": 1.73,
@@ -8221,7 +8221,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 17.81,
         "y": 4.747,
@@ -8253,7 +8253,7 @@
        "bottom": 3.49700022
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 17.81,
         "y": 4.747,
@@ -8297,7 +8297,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 6.756,
         "y": 4.747,
@@ -8329,7 +8329,7 @@
        "bottom": 3.49700022
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 6.756,
         "y": 4.747,
@@ -8373,7 +8373,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": -4.36,
         "y": 4.747,
@@ -8405,7 +8405,7 @@
        "bottom": 3.49700022
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": -4.36,
         "y": 4.747,
@@ -9316,8 +9316,8 @@
       "customs",
       "shoreline",
       "night-factory",
-      "woods",
-      "ground-zero-21"
+      "ground-zero-21",
+      "woods"
      ],
      "markers": []
     },
@@ -11330,8 +11330,8 @@
       "customs",
       "shoreline",
       "night-factory",
-      "woods",
-      "ground-zero-21"
+      "ground-zero-21",
+      "woods"
      ],
      "markers": []
     }
@@ -12703,12 +12703,12 @@
      "description": "Install a WI-FI Camera in the room where the firefighter burned the books to become happy on Factory",
      "optional": false,
      "maps": [
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 17.42,
         "y": 1.832,
@@ -12740,7 +12740,7 @@
        "bottom": 0.77437377
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 17.42,
         "y": 1.832,
@@ -12779,12 +12779,12 @@
      "description": "Install a WI-FI Camera at the place where some valve technicians couldn't finish their third project on Factory",
      "optional": false,
      "maps": [
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 21.4003162,
         "y": -1.87831354,
@@ -12816,7 +12816,7 @@
        "bottom": -2.21257639
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 21.4003162,
         "y": -1.87831354,
@@ -12855,12 +12855,12 @@
      "description": "Install a WI-FI Camera at the dangerous Russian chocolate beauty on Factory",
      "optional": false,
      "maps": [
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": -49.607,
         "y": 2.34749985,
@@ -12892,7 +12892,7 @@
        "bottom": 2.16026068
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": -49.607,
         "y": 2.34749985,
@@ -12931,12 +12931,12 @@
      "description": "Install a WI-FI Camera in the conspiracy theorist's room on Factory",
      "optional": false,
      "maps": [
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 27.3690071,
         "y": 9.233061,
@@ -12968,7 +12968,7 @@
        "bottom": 8.622884
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 27.3690071,
         "y": 9.233061,
@@ -13007,12 +13007,12 @@
      "description": "Install a WI-FI Camera near where someone thought he'd get transported to the magic school on Factory",
      "optional": false,
      "maps": [
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 52.4067078,
         "y": 1.8644464,
@@ -13044,7 +13044,7 @@
        "bottom": 0.669135332
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 52.4067078,
         "y": 1.8644464,
@@ -13083,12 +13083,12 @@
      "description": "Install a WI-FI Camera at the mother of all strategy games on Factory",
      "optional": false,
      "maps": [
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 30.7356358,
         "y": 4.287,
@@ -13120,7 +13120,7 @@
        "bottom": 3.75492382
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 30.7356358,
         "y": 4.287,
@@ -13159,12 +13159,12 @@
      "description": "Install a WI-FI Camera at the stairway to the skies on Factory",
      "optional": false,
      "maps": [
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 59.563,
         "y": 0.7,
@@ -13196,7 +13196,7 @@
        "bottom": 0.5396549
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 59.563,
         "y": 0.7,
@@ -13416,17 +13416,17 @@
      "description": "Eliminate Scavs",
      "optional": false,
      "maps": [
-      "icebreaker",
-      "lighthouse",
+      "ground-zero-tutorial",
       "interchange",
       "customs",
-      "shoreline",
-      "night-factory",
-      "woods",
-      "streets-of-tarkov",
       "factory",
+      "shoreline",
       "reserve",
-      "ground-zero-tutorial"
+      "night-factory",
+      "icebreaker",
+      "lighthouse",
+      "streets-of-tarkov",
+      "woods"
      ],
      "markers": []
     },
@@ -14605,8 +14605,8 @@
      "optional": false,
      "maps": [
       "the-lab",
-      "the-lab-dark",
-      "reserve"
+      "reserve",
+      "the-lab-dark"
      ],
      "markers": []
     },
@@ -14637,8 +14637,8 @@
      "optional": false,
      "maps": [
       "the-lab",
-      "the-lab-dark",
-      "reserve"
+      "reserve",
+      "the-lab-dark"
      ],
      "markers": []
     },
@@ -14892,10 +14892,10 @@
      "description": "Locate and neutralize Knight (in one raid)",
      "optional": false,
      "maps": [
-      "icebreaker",
-      "lighthouse",
       "customs",
       "shoreline",
+      "icebreaker",
+      "lighthouse",
       "woods"
      ],
      "markers": []
@@ -14906,9 +14906,9 @@
      "description": "Locate and neutralize Big Pipe (in one raid)",
      "optional": false,
      "maps": [
-      "lighthouse",
       "customs",
       "shoreline",
+      "lighthouse",
       "woods"
      ],
      "markers": []
@@ -14919,9 +14919,9 @@
      "description": "Locate and neutralize Birdeye (in one raid)",
      "optional": false,
      "maps": [
-      "lighthouse",
       "customs",
       "shoreline",
+      "lighthouse",
       "woods"
      ],
      "markers": []
@@ -15798,17 +15798,17 @@
      "description": "Eliminate Scavs with Light machine guns",
      "optional": false,
      "maps": [
-      "icebreaker",
-      "lighthouse",
+      "ground-zero-tutorial",
       "interchange",
       "customs",
-      "shoreline",
-      "night-factory",
-      "woods",
-      "streets-of-tarkov",
       "factory",
+      "shoreline",
       "reserve",
-      "ground-zero-tutorial"
+      "night-factory",
+      "icebreaker",
+      "lighthouse",
+      "streets-of-tarkov",
+      "woods"
      ],
      "markers": []
     }
@@ -15852,11 +15852,11 @@
       "icebreaker",
       "reserve",
       "interchange",
-      "lighthouse",
       "shoreline",
+      "lighthouse",
       "woods",
-      "night-factory",
       "factory",
+      "night-factory",
       "the-lab-dark"
      ],
      "markers": []
@@ -18076,8 +18076,8 @@
       "interchange",
       "woods",
       "shoreline",
-      "night-factory",
       "factory",
+      "night-factory",
       "lighthouse"
      ],
      "markers": []
@@ -18986,8 +18986,8 @@
      "optional": false,
      "maps": [
       "interchange",
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": []
     },
@@ -19184,12 +19184,12 @@
      "description": "Stash the package in the break room on the 2nd floor near Gate 3 on Factory",
      "optional": false,
      "maps": [
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 41.7418137,
         "y": 5.448181,
@@ -19221,7 +19221,7 @@
        "bottom": 4.488081
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 41.7418137,
         "y": 5.448181,
@@ -19294,12 +19294,12 @@
      "description": "Gain access to the locked room in the office hallway on the third floor on Factory",
      "optional": true,
      "maps": [
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 30.131813,
         "y": 8.718182,
@@ -19331,7 +19331,7 @@
        "bottom": 8.218182
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 30.131813,
         "y": 8.718182,
@@ -22629,70 +22629,6 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
-       "position": {
-        "x": 68.193,
-        "y": 1.059,
-        "z": -7.383
-       },
-       "outline": [
-        {
-         "x": 67.693,
-         "y": 1.059,
-         "z": -8.382999
-        },
-        {
-         "x": 68.693,
-         "y": 1.059,
-         "z": -8.382999
-        },
-        {
-         "x": 68.693,
-         "y": 1.059,
-         "z": -6.383
-        },
-        {
-         "x": 67.693,
-         "y": 1.059,
-         "z": -6.383
-        }
-       ],
-       "top": 2.059,
-       "bottom": 0.0590000153
-      },
-      {
-       "map": "night-factory",
-       "position": {
-        "x": 68.193,
-        "y": 1.059,
-        "z": -7.383
-       },
-       "outline": [
-        {
-         "x": 67.693,
-         "y": 1.059,
-         "z": -8.382999
-        },
-        {
-         "x": 68.693,
-         "y": 1.059,
-         "z": -8.382999
-        },
-        {
-         "x": 68.693,
-         "y": 1.059,
-         "z": -6.383
-        },
-        {
-         "x": 67.693,
-         "y": 1.059,
-         "z": -6.383
-        }
-       ],
-       "top": 2.059,
-       "bottom": 0.0590000153
-      },
-      {
        "map": "factory",
        "position": {
         "x": 68.193,
@@ -22726,6 +22662,70 @@
       },
       {
        "map": "factory",
+       "position": {
+        "x": 68.193,
+        "y": 1.059,
+        "z": -7.383
+       },
+       "outline": [
+        {
+         "x": 67.693,
+         "y": 1.059,
+         "z": -8.382999
+        },
+        {
+         "x": 68.693,
+         "y": 1.059,
+         "z": -8.382999
+        },
+        {
+         "x": 68.693,
+         "y": 1.059,
+         "z": -6.383
+        },
+        {
+         "x": 67.693,
+         "y": 1.059,
+         "z": -6.383
+        }
+       ],
+       "top": 2.059,
+       "bottom": 0.0590000153
+      },
+      {
+       "map": "night-factory",
+       "position": {
+        "x": 68.193,
+        "y": 1.059,
+        "z": -7.383
+       },
+       "outline": [
+        {
+         "x": 67.693,
+         "y": 1.059,
+         "z": -8.382999
+        },
+        {
+         "x": 68.693,
+         "y": 1.059,
+         "z": -8.382999
+        },
+        {
+         "x": 68.693,
+         "y": 1.059,
+         "z": -6.383
+        },
+        {
+         "x": 67.693,
+         "y": 1.059,
+         "z": -6.383
+        }
+       ],
+       "top": 2.059,
+       "bottom": 0.0590000153
+      },
+      {
+       "map": "night-factory",
        "position": {
         "x": 68.193,
         "y": 1.059,
@@ -22769,70 +22769,6 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
-       "position": {
-        "x": 60.076,
-        "y": 1.093,
-        "z": -48.389
-       },
-       "outline": [
-        {
-         "x": 59.576,
-         "y": 1.093,
-         "z": -49.389
-        },
-        {
-         "x": 60.576,
-         "y": 1.093,
-         "z": -49.389
-        },
-        {
-         "x": 60.576,
-         "y": 1.093,
-         "z": -47.389
-        },
-        {
-         "x": 59.576,
-         "y": 1.093,
-         "z": -47.389
-        }
-       ],
-       "top": 2.093,
-       "bottom": 0.0930000544
-      },
-      {
-       "map": "night-factory",
-       "position": {
-        "x": 60.076,
-        "y": 1.093,
-        "z": -48.389
-       },
-       "outline": [
-        {
-         "x": 59.576,
-         "y": 1.093,
-         "z": -49.389
-        },
-        {
-         "x": 60.576,
-         "y": 1.093,
-         "z": -49.389
-        },
-        {
-         "x": 60.576,
-         "y": 1.093,
-         "z": -47.389
-        },
-        {
-         "x": 59.576,
-         "y": 1.093,
-         "z": -47.389
-        }
-       ],
-       "top": 2.093,
-       "bottom": 0.0930000544
-      },
-      {
        "map": "factory",
        "position": {
         "x": 60.076,
@@ -22866,6 +22802,70 @@
       },
       {
        "map": "factory",
+       "position": {
+        "x": 60.076,
+        "y": 1.093,
+        "z": -48.389
+       },
+       "outline": [
+        {
+         "x": 59.576,
+         "y": 1.093,
+         "z": -49.389
+        },
+        {
+         "x": 60.576,
+         "y": 1.093,
+         "z": -49.389
+        },
+        {
+         "x": 60.576,
+         "y": 1.093,
+         "z": -47.389
+        },
+        {
+         "x": 59.576,
+         "y": 1.093,
+         "z": -47.389
+        }
+       ],
+       "top": 2.093,
+       "bottom": 0.0930000544
+      },
+      {
+       "map": "night-factory",
+       "position": {
+        "x": 60.076,
+        "y": 1.093,
+        "z": -48.389
+       },
+       "outline": [
+        {
+         "x": 59.576,
+         "y": 1.093,
+         "z": -49.389
+        },
+        {
+         "x": 60.576,
+         "y": 1.093,
+         "z": -49.389
+        },
+        {
+         "x": 60.576,
+         "y": 1.093,
+         "z": -47.389
+        },
+        {
+         "x": 59.576,
+         "y": 1.093,
+         "z": -47.389
+        }
+       ],
+       "top": 2.093,
+       "bottom": 0.0930000544
+      },
+      {
+       "map": "night-factory",
        "position": {
         "x": 60.076,
         "y": 1.093,
@@ -23327,7 +23327,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 66.665,
         "y": -1.676,
@@ -23359,7 +23359,7 @@
        "bottom": -2.676
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 66.665,
         "y": -1.676,
@@ -23403,7 +23403,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": -53.107,
         "y": 2.292,
@@ -23435,7 +23435,7 @@
        "bottom": 1.292
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": -53.107,
         "y": 2.292,
@@ -23479,7 +23479,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 59.698,
         "y": 1.163,
@@ -23511,7 +23511,7 @@
        "bottom": 0.162999988
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 59.698,
         "y": 1.163,
@@ -23555,7 +23555,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": -18.4,
         "y": 1.16133332,
@@ -23587,7 +23587,7 @@
        "bottom": 0.161333323
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": -18.4,
         "y": 1.16133332,
@@ -25512,16 +25512,16 @@
      "optional": false,
      "maps": [
       "streets-of-tarkov",
-      "icebreaker",
-      "lighthouse",
+      "ground-zero-tutorial",
       "interchange",
       "customs",
-      "shoreline",
-      "night-factory",
-      "woods",
       "factory",
+      "shoreline",
       "reserve",
-      "ground-zero-tutorial"
+      "night-factory",
+      "icebreaker",
+      "lighthouse",
+      "woods"
      ],
      "markers": []
     }
@@ -26543,8 +26543,8 @@
      "optional": false,
      "maps": [
       "the-lab",
-      "the-lab-dark",
-      "reserve"
+      "reserve",
+      "the-lab-dark"
      ],
      "markers": []
     }
@@ -28217,17 +28217,17 @@
      "description": "Eliminate Scavs with headshots",
      "optional": false,
      "maps": [
-      "icebreaker",
-      "lighthouse",
+      "ground-zero-tutorial",
       "interchange",
       "customs",
-      "shoreline",
-      "night-factory",
-      "woods",
-      "streets-of-tarkov",
       "factory",
+      "shoreline",
       "reserve",
-      "ground-zero-tutorial"
+      "night-factory",
+      "icebreaker",
+      "lighthouse",
+      "streets-of-tarkov",
+      "woods"
      ],
      "markers": []
     }
@@ -28268,8 +28268,8 @@
       "customs",
       "shoreline",
       "night-factory",
-      "woods",
-      "ground-zero-21"
+      "ground-zero-21",
+      "woods"
      ],
      "markers": []
     }
@@ -32768,8 +32768,8 @@
      "optional": false,
      "maps": [
       "the-lab",
-      "the-lab-dark",
-      "reserve"
+      "reserve",
+      "the-lab-dark"
      ],
      "markers": []
     },
@@ -36786,7 +36786,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 19.81,
         "y": -2.56,
@@ -36818,7 +36818,7 @@
        "bottom": -5.06
       },
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": -51.08,
         "y": -2.99,
@@ -36850,7 +36850,7 @@
        "bottom": -5.49
       },
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 19.81,
         "y": -2.99,
@@ -36882,7 +36882,7 @@
        "bottom": -5.49
       },
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 64.99,
         "y": -2.99,
@@ -36914,7 +36914,7 @@
        "bottom": -5.49
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 19.81,
         "y": -2.56,
@@ -36946,7 +36946,7 @@
        "bottom": -5.06
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": -51.08,
         "y": -2.99,
@@ -36978,7 +36978,7 @@
        "bottom": -5.49
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 19.81,
         "y": -2.99,
@@ -37010,7 +37010,7 @@
        "bottom": -5.49
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 64.99,
         "y": -2.99,
@@ -37120,7 +37120,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 63.612,
         "y": 6.44,
@@ -37152,7 +37152,7 @@
        "bottom": 5.19
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 63.612,
         "y": 6.44,
@@ -37196,7 +37196,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": -5.474,
         "y": 5.776,
@@ -37228,7 +37228,7 @@
        "bottom": 4.526
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": -5.474,
         "y": 5.776,
@@ -37272,7 +37272,7 @@
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": -24.441,
         "y": 6.197,
@@ -37304,7 +37304,7 @@
        "bottom": 4.947
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": -24.441,
         "y": 6.197,
@@ -37639,12 +37639,12 @@
      "description": "Stash the package at the laboratory storage room on Factory",
      "optional": false,
      "maps": [
-      "night-factory",
-      "factory"
+      "factory",
+      "night-factory"
      ],
      "markers": [
       {
-       "map": "night-factory",
+       "map": "factory",
        "position": {
         "x": 27.89,
         "y": 1.15,
@@ -37676,7 +37676,7 @@
        "bottom": -0.100000024
       },
       {
-       "map": "factory",
+       "map": "night-factory",
        "position": {
         "x": 27.89,
         "y": 1.15,
@@ -40197,17 +40197,17 @@
      "description": "Eliminate Scavs while completing the other objectives",
      "optional": false,
      "maps": [
-      "icebreaker",
-      "lighthouse",
+      "ground-zero-tutorial",
       "interchange",
       "customs",
-      "shoreline",
-      "night-factory",
-      "woods",
-      "streets-of-tarkov",
       "factory",
+      "shoreline",
       "reserve",
-      "ground-zero-tutorial"
+      "night-factory",
+      "icebreaker",
+      "lighthouse",
+      "streets-of-tarkov",
+      "woods"
      ],
      "markers": []
     },
@@ -40477,17 +40477,17 @@
      "description": "Eliminate Scavs while completing the other objectives",
      "optional": false,
      "maps": [
-      "icebreaker",
-      "lighthouse",
+      "ground-zero-tutorial",
       "interchange",
       "customs",
-      "shoreline",
-      "night-factory",
-      "woods",
-      "streets-of-tarkov",
       "factory",
+      "shoreline",
       "reserve",
-      "ground-zero-tutorial"
+      "night-factory",
+      "icebreaker",
+      "lighthouse",
+      "streets-of-tarkov",
+      "woods"
      ],
      "markers": []
     },
@@ -41942,134 +41942,6 @@
      ],
      "markers": [
       {
-       "map": "customs",
-       "position": {
-        "x": -41.5100021,
-        "y": -12.633,
-        "z": 122.67
-       },
-       "outline": [
-        {
-         "x": -47.15104,
-         "y": -12.633,
-         "z": 113.687866
-        },
-        {
-         "x": -32.52787,
-         "y": -12.633,
-         "z": 117.028961
-        },
-        {
-         "x": -35.86896,
-         "y": -12.633,
-         "z": 131.65213
-        },
-        {
-         "x": -50.4921341,
-         "y": -12.633,
-         "z": 128.311035
-        }
-       ],
-       "top": -11.133,
-       "bottom": -14.133
-      },
-      {
-       "map": "customs",
-       "position": {
-        "x": 463.18,
-        "y": -1.46,
-        "z": -112.36
-       },
-       "outline": [
-        {
-         "x": 457.8446,
-         "y": -1.46,
-         "z": -114.028442
-        },
-        {
-         "x": 467.715973,
-         "y": -1.46,
-         "z": -115.627243
-        },
-        {
-         "x": 468.515381,
-         "y": -1.46,
-         "z": -110.691559
-        },
-        {
-         "x": 458.644,
-         "y": -1.46,
-         "z": -109.092758
-        }
-       ],
-       "top": 0.03999996,
-       "bottom": -2.96
-      },
-      {
-       "map": "customs",
-       "position": {
-        "x": -41.5100021,
-        "y": -12.633,
-        "z": 122.67
-       },
-       "outline": [
-        {
-         "x": -47.15104,
-         "y": -12.633,
-         "z": 113.687866
-        },
-        {
-         "x": -32.52787,
-         "y": -12.633,
-         "z": 117.028961
-        },
-        {
-         "x": -35.86896,
-         "y": -12.633,
-         "z": 131.65213
-        },
-        {
-         "x": -50.4921341,
-         "y": -12.633,
-         "z": 128.311035
-        }
-       ],
-       "top": -11.133,
-       "bottom": -14.133
-      },
-      {
-       "map": "customs",
-       "position": {
-        "x": 463.18,
-        "y": -1.46,
-        "z": -112.36
-       },
-       "outline": [
-        {
-         "x": 457.8446,
-         "y": -1.46,
-         "z": -114.028442
-        },
-        {
-         "x": 467.715973,
-         "y": -1.46,
-         "z": -115.627243
-        },
-        {
-         "x": 468.515381,
-         "y": -1.46,
-         "z": -110.691559
-        },
-        {
-         "x": 458.644,
-         "y": -1.46,
-         "z": -109.092758
-        }
-       ],
-       "top": 0.03999996,
-       "bottom": -2.96
-      },
-      {
        "map": "the-labyrinth",
        "position": {
         "x": 19.443,
@@ -42100,6 +41972,134 @@
        ],
        "top": 2.57000017,
        "bottom": -0.429999948
+      },
+      {
+       "map": "customs",
+       "position": {
+        "x": -41.5100021,
+        "y": -12.633,
+        "z": 122.67
+       },
+       "outline": [
+        {
+         "x": -47.15104,
+         "y": -12.633,
+         "z": 113.687866
+        },
+        {
+         "x": -32.52787,
+         "y": -12.633,
+         "z": 117.028961
+        },
+        {
+         "x": -35.86896,
+         "y": -12.633,
+         "z": 131.65213
+        },
+        {
+         "x": -50.4921341,
+         "y": -12.633,
+         "z": 128.311035
+        }
+       ],
+       "top": -11.133,
+       "bottom": -14.133
+      },
+      {
+       "map": "customs",
+       "position": {
+        "x": 463.18,
+        "y": -1.46,
+        "z": -112.36
+       },
+       "outline": [
+        {
+         "x": 457.8446,
+         "y": -1.46,
+         "z": -114.028442
+        },
+        {
+         "x": 467.715973,
+         "y": -1.46,
+         "z": -115.627243
+        },
+        {
+         "x": 468.515381,
+         "y": -1.46,
+         "z": -110.691559
+        },
+        {
+         "x": 458.644,
+         "y": -1.46,
+         "z": -109.092758
+        }
+       ],
+       "top": 0.03999996,
+       "bottom": -2.96
+      },
+      {
+       "map": "customs",
+       "position": {
+        "x": -41.5100021,
+        "y": -12.633,
+        "z": 122.67
+       },
+       "outline": [
+        {
+         "x": -47.15104,
+         "y": -12.633,
+         "z": 113.687866
+        },
+        {
+         "x": -32.52787,
+         "y": -12.633,
+         "z": 117.028961
+        },
+        {
+         "x": -35.86896,
+         "y": -12.633,
+         "z": 131.65213
+        },
+        {
+         "x": -50.4921341,
+         "y": -12.633,
+         "z": 128.311035
+        }
+       ],
+       "top": -11.133,
+       "bottom": -14.133
+      },
+      {
+       "map": "customs",
+       "position": {
+        "x": 463.18,
+        "y": -1.46,
+        "z": -112.36
+       },
+       "outline": [
+        {
+         "x": 457.8446,
+         "y": -1.46,
+         "z": -114.028442
+        },
+        {
+         "x": 467.715973,
+         "y": -1.46,
+         "z": -115.627243
+        },
+        {
+         "x": 468.515381,
+         "y": -1.46,
+         "z": -110.691559
+        },
+        {
+         "x": 458.644,
+         "y": -1.46,
+         "z": -109.092758
+        }
+       ],
+       "top": 0.03999996,
+       "bottom": -2.96
       }
      ]
     },
@@ -43268,9 +43268,9 @@
      "description": "Eliminate Rogues",
      "optional": false,
      "maps": [
-      "lighthouse",
       "customs",
       "shoreline",
+      "lighthouse",
       "woods",
       "icebreaker"
      ],
