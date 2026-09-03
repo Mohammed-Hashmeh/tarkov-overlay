@@ -1,0 +1,743 @@
+:root {
+  --overlay-opacity: 0.7;
+  --bg: #14161a;
+  --panel: #1d2026;
+  --panel-2: #262a31;
+  --text: #d8dbe0;
+  --muted: #8b919a;
+  --accent: #c7a76b; /* tarkov tan */
+  --border: #33383f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--text);
+  background: transparent;
+}
+
+#app {
+  position: relative;
+  background: var(--bg);
+}
+
+/* Overlay mode: the whole app becomes translucent so the game shows through. */
+body.overlay-mode #app {
+  opacity: var(--overlay-opacity);
+  background: rgb(10 12 14 / 60%);
+}
+
+body.click-through #sidebar,
+body.click-through #sidebar-open,
+body.click-through #status-bar {
+  display: none;
+}
+
+#map {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  cursor: default;
+}
+
+.leaflet-container {
+  background: transparent;
+  font: inherit;
+}
+
+/* Sidebar */
+#sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 24px;
+  width: 250px;
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+#sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+#sidebar-header h1 {
+  font-size: 14px;
+  margin: 0;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+#sidebar-body {
+  overflow-y: auto;
+  padding: 8px;
+  flex: 1;
+}
+
+#sidebar-open {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1000;
+}
+
+.panel {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.panel h2 {
+  font-size: 12px;
+  margin: 0 0 6px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.row > span:first-child {
+  flex: 0 0 auto;
+}
+
+.row select,
+.row input[type='range'] {
+  flex: 1;
+  min-width: 0;
+}
+
+select,
+input[type='text'],
+input[type='search'] {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 6px;
+  font: inherit;
+}
+
+button {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+button.active,
+button.primary {
+  background: var(--accent);
+  color: #1a1a1a;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+button.linkish {
+  background: none;
+  border: none;
+  color: var(--accent);
+  text-decoration: underline;
+  padding: 0;
+  font-size: 11px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 11px;
+  margin: 4px 0 0;
+}
+
+/* Status bar */
+#status-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 0 10px;
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--muted);
+  z-index: 1000;
+}
+
+#status-map {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+#clickthrough-indicator {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1001;
+  background: rgb(0 0 0 / 55%);
+  color: var(--accent);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  pointer-events: none;
+}
+
+/* Mini-map mode: map only, compact chrome */
+body.mini-mode #sidebar,
+body.mini-mode #sidebar-open,
+body.mini-mode #status-bar {
+  display: none;
+}
+
+body.mini-mode #objective-chip {
+  top: 26px;
+  font-size: 10px;
+  padding: 2px 8px;
+}
+
+#mini-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 22px;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 4px;
+  background: rgb(0 0 0 / 45%);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+#mini-controls[hidden] {
+  display: none;
+}
+
+body.mini-mode:hover #mini-controls {
+  opacity: 1;
+}
+
+#mini-drag {
+  flex: 1;
+  align-self: stretch;
+  -webkit-app-region: drag;
+  cursor: move;
+}
+
+#mini-controls button {
+  -webkit-app-region: no-drag;
+  padding: 0 6px;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+/* Nearest objectives + extract: stays visible in click-through overlay mode */
+#objective-chip {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: rgb(0 0 0 / 62%);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: none;
+  max-width: min(420px, 90vw);
+}
+
+#objective-chip[hidden] {
+  display: none;
+}
+
+.objective-row {
+  display: grid;
+  grid-template-columns: 14px 42px 1fr;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.objective-hint {
+  display: block;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.objective-arrow {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  /* the glyph points right, so JS subtracts 90deg to make 0deg = up */
+  transform-origin: center;
+  text-shadow: 0 0 3px rgb(0 0 0 / 80%);
+}
+
+.objective-distance {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.objective-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* Mini map: keep it tight — arrows and distances only */
+body.mini-mode #objective-chip {
+  font-size: 11px;
+  padding: 4px 9px;
+  max-width: 190px;
+}
+
+body.mini-mode .objective-row {
+  grid-template-columns: 13px 1fr;
+}
+
+body.mini-mode .objective-name {
+  display: none;
+}
+
+/* Markers */
+.mk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1.5px solid rgb(0 0 0 / 70%);
+  font-size: 13px;
+  line-height: 1;
+  color: #111;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 60%);
+}
+
+.mk span {
+  pointer-events: none;
+}
+
+.mk-extract-pmc {
+  background: #4caf50;
+}
+
+.mk-extract-scav {
+  background: #ff9800;
+}
+
+.mk-extract-shared {
+  background: #03a9f4;
+}
+
+.mk-transit {
+  background: #80cbc4;
+}
+
+.mk-spawn {
+  background: #b0bec5;
+  font-size: 16px;
+}
+
+.mk-boss {
+  background: #e53935;
+  color: #fff;
+}
+
+.mk-loot {
+  background: #fdd835;
+}
+
+.mk-lock {
+  background: #8d6e63;
+  font-size: 11px;
+}
+
+.mk-hazard {
+  background: #ffb300;
+}
+
+.mk-switch {
+  background: #7e57c2;
+  color: #fff;
+}
+
+.mk-quest {
+  background: #ab47bc;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Player marker */
+.player-marker {
+  background: none;
+  border: none;
+  position: relative;
+}
+
+.player-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  margin: -7.5px 0 0 -7.5px;
+  background: #29b6f6;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  /* dark rim first so the marker reads on both bright and dark map areas */
+  box-shadow:
+    0 0 0 2px rgb(0 0 0 / 60%),
+    0 0 14px 4px rgb(41 182 246 / 85%);
+}
+
+/* Expanding ring so the eye finds the marker immediately */
+.player-pulse {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  margin: -7.5px 0 0 -7.5px;
+  border: 2px solid rgb(41 182 246 / 85%);
+  border-radius: 50%;
+  animation: player-pulse 1.9s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes player-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+
+  100% {
+    transform: scale(3.6);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .player-pulse {
+    animation: none;
+    opacity: 0.35;
+    transform: scale(2.2);
+  }
+}
+
+.player-cone {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+}
+
+.player-cone::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  margin-left: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 19px solid rgb(41 182 246 / 80%);
+  filter: drop-shadow(0 0 2px rgb(0 0 0 / 70%));
+}
+
+/* Slightly larger in the small in-game windows. Scale the inner elements, not
+   .player-marker — Leaflet positions that element with its own transform. */
+body.mini-mode .player-dot,
+body.overlay-mode .player-dot {
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+}
+
+/* Marker name bubbles (normal mode only) */
+.leaflet-tooltip.marker-label {
+  background: rgb(0 0 0 / 55%);
+  border: none;
+  box-shadow: none;
+  color: #e8eaee;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.leaflet-tooltip.marker-label::before {
+  display: none; /* no tooltip arrow */
+}
+
+body.mini-mode .leaflet-tooltip.marker-label {
+  font-size: 10px;
+  padding: 0 5px;
+}
+
+/* Popups */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 60%);
+}
+
+.leaflet-popup-content {
+  margin: 8px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 55%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-box {
+  width: min(560px, 92vw);
+  max-height: 84vh;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-box header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-box header h2 {
+  margin: 0;
+  font-size: 14px;
+  color: var(--accent);
+}
+
+.modal-close {
+  border: none;
+  background: none;
+  font-size: 14px;
+}
+
+.modal-body {
+  padding: 12px 14px;
+  overflow-y: auto;
+}
+
+.quest-search {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.quest-list details {
+  margin-bottom: 6px;
+}
+
+.quest-list summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 4px 0;
+}
+
+.quest-row {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 3px 0 3px 16px;
+  cursor: pointer;
+}
+
+.track-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  color: var(--muted);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.wide-btn {
+  width: 100%;
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+.wide-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Sidebar quest quick panel */
+#quest-quick-list {
+  max-height: 180px;
+  overflow-y: auto;
+  margin-top: 6px;
+}
+
+.qq-title {
+  margin: 2px 0 4px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.qq-row {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 6px;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.qq-row .qq-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.qq-row small {
+  color: var(--muted);
+}
+
+.qq-row.tracked .track-btn,
+.qq-row.tracked .qq-name {
+  color: var(--accent);
+}
+
+.done-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0 4px;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.done-btn:hover {
+  color: #4caf50;
+  border-color: #4caf50;
+}
+
+.quest-row.tracked .track-btn,
+.track-btn:hover {
+  color: var(--accent);
+}
+
+.quest-row.tracked span {
+  color: var(--accent);
+}
+
+.quest-row small {
+  color: var(--muted);
+}
+
+.quest-row.done span {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.quest-row.locked span {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.settings-field span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.fatal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.fatal h1 {
+  color: var(--accent);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}

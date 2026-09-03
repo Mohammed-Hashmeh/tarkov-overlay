@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- No remote origins are listed anywhere: the page cannot load or contact
+         anything off this machine. localhost is only reachable by the Vite dev
+         server; packaged builds additionally block it at the session level. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' appdata: data: blob:;
+               font-src 'self';
+               connect-src 'self' appdata: ws://localhost:* http://localhost:*;
+               form-action 'none';
+               base-uri 'none';
+               object-src 'none'"
+    />
+    <title>Tarkov Overlay</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="map"></div>
+      <aside id="sidebar">
+        <header id="sidebar-header">
+          <h1>Tarkov Overlay</h1>
+          <button id="sidebar-collapse" title="Collapse sidebar">«</button>
+        </header>
+        <div id="sidebar-body">
+          <section class="panel">
+            <label class="row">
+              <span>Map</span>
+              <select id="map-select"></select>
+            </label>
+            <label class="row">
+              <span>Floor</span>
+              <select id="floor-select"></select>
+            </label>
+          </section>
+          <section class="panel" id="layers-panel">
+            <h2>Layers</h2>
+            <div id="layer-toggles"></div>
+            <label class="row">
+              <span>Extracts for</span>
+              <select id="faction-select">
+                <option value="all">All</option>
+                <option value="pmc">PMC</option>
+                <option value="scav">Scav</option>
+              </select>
+            </label>
+          </section>
+          <section class="panel" id="quests-panel">
+            <h2>Quests <button id="quests-expand" class="linkish">open list</button></h2>
+            <label class="row"
+              ><input type="checkbox" id="quests-available-only" /> <span>Only available (prereqs done)</span></label
+            >
+            <button id="quests-sync" class="wide-btn">sync from game logs</button>
+            <div id="quest-quick-list"></div>
+          </section>
+          <section class="panel" id="window-panel">
+            <h2>Window</h2>
+            <div class="row">
+              <button id="mode-normal">Normal</button>
+              <button id="mode-overlay">Overlay</button>
+              <button id="mode-mini">Mini</button>
+            </div>
+            <label class="row" id="opacity-row">
+              <span>Background</span>
+              <input type="range" id="opacity-slider" min="0" max="100" value="70" />
+            </label>
+            <p class="hint" id="hotkey-hint"></p>
+          </section>
+          <section class="panel" id="settings-panel">
+            <h2>Settings <button id="settings-expand" class="linkish">edit</button></h2>
+          </section>
+        </div>
+      </aside>
+      <button id="sidebar-open" title="Open sidebar" hidden>»</button>
+      <div id="status-bar">
+        <span id="status-map">no map</span>
+        <span id="status-position">no position — take an in-game screenshot</span>
+        <span id="status-logs"></span>
+        <span id="status-quests"></span>
+      </div>
+      <div id="clickthrough-indicator" hidden>click-through — F10 to interact</div>
+      <div id="objective-chip" hidden></div>
+      <div id="mini-controls" hidden>
+        <span id="mini-drag" title="Drag to move"></span>
+        <button id="mini-floor-up" title="Floor up">▲</button>
+        <button id="mini-floor-down" title="Floor down">▼</button>
+        <button id="mini-expand" title="Back to normal window">⤢</button>
+      </div>
+      <div id="modal-root" hidden></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

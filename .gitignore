@@ -1,0 +1,11 @@
+node_modules/
+out/
+dist/
+data/tiles/
+dev-logs/
+*.log
+.DS_Store
+.claude/settings.local.json
+log-archive/
+/settings.json
+.env
